@@ -33,9 +33,8 @@ function AppContent() {
 
   // Handler to "refresh" the current route/component
   const handleRefresh = () => {
-    // This will re-navigate to the current route, causing components to re-mount
-    navigate(location.pathname + location.search + location.hash, { replace: true });
-    return Promise.resolve();
+  window.location.reload();
+  return Promise.resolve();
   };
 
   return (

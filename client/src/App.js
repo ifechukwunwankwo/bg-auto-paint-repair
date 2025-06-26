@@ -1,5 +1,4 @@
-// src/App.js
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -23,6 +22,7 @@ function App() {
 
 function AppContent() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Scroll to top on route change
   useEffect(() => {
@@ -31,18 +31,17 @@ function AppContent() {
     }
   }, [location.pathname, location.search, location.hash]);
 
-  // Handler to reload the current route/component
+  // Handler to "refresh" the current route/component
   const handleRefresh = () => {
-    // This will reload the current route/component
-    window.location.reload();
-    // If you want to reload data instead of full reload, you can trigger a state update here
+    // This will re-navigate to the current route, causing components to re-mount
+    navigate(location.pathname + location.search + location.hash, { replace: true });
     return Promise.resolve();
   };
 
   return (
-    <PullToRefresh onRefresh={handleRefresh}>
-      <div className="min-h-screen bg-bng-white">
-        <Navbar />
+    <div className="min-h-screen bg-bng-white">
+      <Navbar />
+      <PullToRefresh onRefresh={handleRefresh}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
@@ -52,10 +51,10 @@ function AppContent() {
           <Route path="/book-appointment" element={<BookAppointment />} />
           <Route path="/appointment-confirmation" element={<AppointmentConfirmation />} />
         </Routes>
-        <Footer />
-        <WhatsAppButton />
-      </div>
-    </PullToRefresh>
+      </PullToRefresh>
+      <Footer />
+      <WhatsAppButton />
+    </div>
   );
 }
 

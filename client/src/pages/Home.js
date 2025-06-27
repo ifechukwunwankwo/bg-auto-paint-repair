@@ -308,7 +308,7 @@ function Home() {
           </h2>
           <div className="flex flex-col md:flex-row gap-6 md:gap-8">
             <div className="flex-1">
-              <p className="text-bng-gray mb-6 text-sm md:text-base text-left">
+              <p className="text-bng-text-gray mb-6 text-sm md:text-base text-left">
                 Welcome to B&G (Auto Paint and Repair), where exceptional care for your vehicle is our priority. Founded by Chukwuka Anike, our premier auto shop in Nkpor, Anambra, specializes in custom auto painting and precision repairs. Located at 3 Kilometer, Umuoji Road, Idemili, we are dedicated to delivering top-tier service backed by unmatched expertise and reliability. At B&G, we transform your vehicle with craftsmanship and passion, ensuring every job meets the highest standards of quality. Trust us to restore your ride with pride.
               </p>
               <div className="space-y-4">

@@ -9,7 +9,7 @@ module.exports = {
         'bng-blue': '#2563eb', // Updated to match Contact.js inline CSS
         'bng-dark': '#315deb', // Hover shade
         'bng-text': '#333', // Headings
-        'bng-text-gray': '#4b5563', // Updated to match Contact.js inline CSS
+        'bng-text-gray': '#4b5563', // Paragraphs
         'bng-light': '#f2f2f2', // Backgrounds
         'bng-lighter': '#e5e5e5', // Sub-footer background
         'bng-footer-dark': '#0F162B', // Footer background

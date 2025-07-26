@@ -114,10 +114,10 @@ function Footer() {
                 <FaPhone className="w-4 h-4 md:w-5 md:h-5 text-bng-blue inline-block align-middle" />
               </span>
               <a
-                href="tel:+2348034079878"
+                href="tel:+2348034079867"
                 className="text-sm md:text-base md:hover:text-bng-blue transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-bng-white focus-visible:rounded"
               >
-                +234 803 407 9878
+                +234 803 407 9867
               </a>
             </li>
             <li className="flex items-center space-x-3">
